@@ -1,11 +1,12 @@
-import { useState } from "react";
 import "./App.css";
 import SearchInput from "./components/SearchInput";
 
 function App() {
   return (
     <>
-      <SearchInput />
+      <div className="container py-2">
+        <SearchInput />
+      </div>
     </>
   );
 }

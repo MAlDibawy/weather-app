@@ -8,22 +8,23 @@ body {
   display: block;
   margin: 40px auto;
   background: #1e202b;
-  border-radius: 30px;
+  border-radius: 50px;
   outline: none;
-  border: none;
   color: #fff !important;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .searchInput:focus {
   background: #1e202b;
 }
+
 .currentWeather {
-  width: 400px;
+  width: 350px;
 }
+
 .weather {
   margin: 10px 10px;
   background-color: #1e202b;

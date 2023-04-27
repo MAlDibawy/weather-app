@@ -6,7 +6,7 @@ export default function CurrentWeather({ data }) {
       <div className="container">
         <div className="weather currentWeather mx-auto">
           <div className="weather-header w-100">
-            <h3>Current Weather</h3>
+            <h4 className="text-center">Current Weather</h4>
           </div>
 
           <div className="d-flex justify-content-between">
