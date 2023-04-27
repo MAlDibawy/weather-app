@@ -1,6 +1,6 @@
 import React from "react";
 import test from "/test.webp";
-export default function CurrentWeather({ currentWeather }) {
+export default function CurrentWeather({ data }) {
   return (
     <>
       <div className="container">
@@ -10,21 +10,21 @@ export default function CurrentWeather({ currentWeather }) {
           </div>
 
           <div className="d-flex justify-content-between">
-            <h5>{currentWeather.location.name}</h5>
-            <p>{currentWeather.location.localtime}</p>
+            <h5>{data.location.name}</h5>
+            <p>{data.location.localtime}</p>
           </div>
           <div className="d-flex align-items-center justify-content-between">
             <p className="temp">
-              {currentWeather.current.temp_c}
+              {data.current.temp_c}
               <sup>o</sup>C
             </p>
-            <p>{currentWeather.current.condition.text}</p>
-            <img src={currentWeather.current.condition.icon} alt="testIcon" />
+            <p>{data.current.condition.text}</p>
+            <img src={data.current.condition.icon} alt="testIcon" />
           </div>
           <div className="d-flex">
             <p className="me-5">RealFeel</p>
             <p className="px-4">
-              {currentWeather.current.feelslike_c}
+              {data.current.feelslike_c}
               <sup>o</sup>C
             </p>
           </div>

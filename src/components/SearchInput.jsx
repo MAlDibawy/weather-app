@@ -39,7 +39,7 @@ export default function SearchInput() {
           onChange={(e) => setInputText(e.target.value)}
         />
       </div>
-      {currentWeather ? <CurrentWeather currentWeather={currentWeather} /> : ""}
+      {currentWeather ? <CurrentWeather data={currentWeather} /> : ""}
     </>
   );
 }
