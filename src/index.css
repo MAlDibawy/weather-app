@@ -6,7 +6,7 @@ body {
   padding: 20px 50px 20px 20px;
   width: 50%;
   display: block;
-  margin: 50px auto;
+  margin: 40px auto;
   background: #1e202b;
   border-radius: 30px;
   outline: none;
@@ -21,9 +21,11 @@ body {
 .searchInput:focus {
   background: #1e202b;
 }
-
-.weather {
+.currentWeather {
   width: 400px;
+}
+.weather {
+  margin: 10px 10px;
   background-color: #1e202b;
   color: #f1f1f1;
   padding: 20px;

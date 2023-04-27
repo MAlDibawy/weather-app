@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { WEATHER_API_URL, API_KEY } from "../API";
 import CurrentWeather from "./CurrentWeather";
+import ForecastWeather from "./ForecastWeather";
 
 export default function SearchInput() {
   const [inputText, setInputText] = useState("");
@@ -17,7 +18,9 @@ export default function SearchInput() {
       .get(
         `${WEATHER_API_URL}/forecast.json?key=${API_KEY}&q=${inputText}&days=3`
       )
-      .then((response) => setForecastWeather(response.data))
+      .then((response) =>
+        setForecastWeather(response.data.forecast.forecastday)
+      )
       .catch((err) => console.log(err));
   };
 
@@ -39,7 +42,8 @@ export default function SearchInput() {
           onChange={(e) => setInputText(e.target.value)}
         />
       </div>
-      {currentWeather ? <CurrentWeather data={currentWeather} /> : ""}
+      {currentWeather && <CurrentWeather data={currentWeather} />}
+      {forecastWeather && <ForecastWeather data={forecastWeather} />}
     </>
   );
 }
