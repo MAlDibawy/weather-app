@@ -17,3 +17,23 @@ body {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
+
+.searchInput:focus {
+  background: #1e202b;
+}
+
+.weather {
+  width: 400px;
+  background-color: #1e202b;
+  color: #f1f1f1;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.temp {
+  font-size: 1.5rem;
+}

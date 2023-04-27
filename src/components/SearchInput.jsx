@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { WEATHER_API_URL, API_KEY } from "../API";
+import CurrentWeather from "./CurrentWeather";
 
 export default function SearchInput() {
   const [inputText, setInputText] = useState("");
@@ -38,6 +39,7 @@ export default function SearchInput() {
           onChange={(e) => setInputText(e.target.value)}
         />
       </div>
+      {currentWeather ? <CurrentWeather currentWeather={currentWeather} /> : ""}
     </>
   );
 }
