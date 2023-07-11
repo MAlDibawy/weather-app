@@ -31,7 +31,7 @@ body {
 }
 
 .currentWeather {
-  width: 350px;
+  width: 90%;
 }
 
 .weather {
@@ -54,4 +54,10 @@ body {
   color: whitesmoke;
   text-align: center;
   font-weight: lighter;
+}
+
+@media screen and (min-width: 480px) {
+  .currentWeather {
+    width: 350px;
+  }
 }
