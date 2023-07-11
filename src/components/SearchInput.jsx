@@ -3,9 +3,11 @@ import axios from "axios";
 import { WEATHER_API_URL, API_KEY } from "../API";
 import CurrentWeather from "./CurrentWeather";
 import ForecastWeather from "./ForecastWeather";
+import { useRef } from "react";
 
 export default function SearchInput() {
   const [inputText, setInputText] = useState("");
+  const inputRef = useRef(null);
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecastWeather, setForecastWeather] = useState(null);
 
@@ -24,7 +26,12 @@ export default function SearchInput() {
       .catch((err) => console.log(err));
   };
 
+  const leaveInput = (e) => {
+    if (e.key === "Enter") inputRef.current.blur();
+  };
+
   useEffect(() => {
+    inputRef.current.focus();
     if (inputText.trim() !== "") {
       getWeatherData(inputText);
     }
@@ -35,11 +42,13 @@ export default function SearchInput() {
       <div className="container">
         <input
           className="form-control searchInput"
+          ref={inputRef}
           type="text"
           name="search"
           id="search"
           placeholder="Enter City ..."
           onChange={(e) => setInputText(e.target.value)}
+          onKeyDown={(e) => leaveInput(e)}
         />
       </div>
       {currentWeather && <CurrentWeather data={currentWeather} />}
