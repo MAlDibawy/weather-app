@@ -1,13 +1,18 @@
 body {
-  background: #f1f1f1;
+  background-image: url("./assets/android_weather_app.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .searchInput {
   padding: 20px 50px 20px 20px;
   width: 50%;
   display: block;
-  margin: 40px auto;
+  margin: 15px auto;
   background: #1e202b;
+  border: none;
   border-radius: 50px;
   outline: none;
   color: #fff !important;
@@ -21,15 +26,19 @@ body {
   background: #1e202b;
 }
 
+.searchInput::placeholder {
+  color: #fff;
+}
+
 .currentWeather {
   width: 350px;
 }
 
 .weather {
-  margin: 10px 10px;
+  margin: 5px;
   background-color: #1e202b;
   color: #f1f1f1;
-  padding: 20px;
+  padding: 14px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -39,4 +48,10 @@ body {
 
 .temp {
   font-size: 1.5rem;
+}
+
+.header {
+  color: whitesmoke;
+  text-align: center;
+  font-weight: lighter;
 }
